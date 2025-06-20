@@ -1,0 +1,68 @@
+.gradient-border {
+  background: linear-gradient(#ffffff, #f5deff) padding-box,
+    linear-gradient(to top, #ec1c24, white) border-box; /* Border */
+  border: 2px solid transparent;
+  border-radius: 30px;
+}
+
+.scroller-track {
+  display: inline-flex;
+  animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.custom-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ec1c24;
+  letter-spacing: 1.5px;
+  transition: all 200ms ease-in-out;
+  border-radius: 30px;
+}
+
+.custom-btn:before {
+  content: "";
+  position: absolute;
+  border: 1px solid #ec1c24;
+  transition: all 200ms ease-in-out;
+  opacity: 0;
+}
+
+.custom-btn::before {
+  border-radius: 36px;
+}
+
+.custom-btn:hover::before {
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
+  opacity: 1;
+}
+
+.custom-btn:active {
+  transform: scale(0.95);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}

@@ -1,0 +1,27 @@
+/* .nav_item {
+  position: relative;
+  display: inline-block;
+  transition: color 0.5s ease-in-out;
+  z-index: 1;
+}
+
+.nav_item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #652d90 0%, #9000ff 100%);
+  border-radius: 50px;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.5s ease-in-out;
+  z-index: -1;
+}
+
+.nav_item:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.nav_item:hover {
+  color: #fff;
+} */
