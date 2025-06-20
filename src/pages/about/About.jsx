@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from '../../components/Navbar'
 import bgImage from '../../assets/images/hero.png'
 import Image from '../../assets/images/home/image-2.png'
@@ -19,6 +19,8 @@ import CEO from '../../assets/images/about/ceo.png'
 
 import Footer from '../../components/Footer'
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const coreItems = [
   {
@@ -82,7 +84,96 @@ const WhyUsItems = [
 
 ]
 
+const TELEGRAM_BOT_TOKEN = '7488110118:AAF1yYnZwMivBG4iaNE-KkLm_o1BlDKbDcQ';
+const TELEGRAM_CHAT_ID = '768856332';
+
+
 const About = () => {
+
+  const [isOpenModal, setIsOpenModal] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone_number: '',
+    address: '',
+    gender: ''  // <-- new field
+  });
+
+  const [isSending, setIsSending] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData(prev => ({
+      ...prev,
+      [e.target.name]: e.target.value
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    setIsSending(true);
+
+    const message = `
+      New Form Submission:
+      Name: ${formData.name}
+      Email: ${formData.email}
+      Phone Number: ${formData.phone_number}
+      Gender: ${formData.gender}
+      Address: ${formData.address}
+    `;
+
+    const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+
+    try {
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          chat_id: TELEGRAM_CHAT_ID,
+          text: message
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
+
+      toast.success('Message sent successfully!', {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
+      setIsOpenModal(false);
+      setFormData({
+        name: '',
+        email: '',
+        phone_number: '',
+        address: ''
+      });
+    } catch (error) {
+      console.error(error);
+      toast.error('Failed to send message. Please try again later.', {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
+    } finally {
+      setIsSending(false);
+    }
+  };
+
   return (
     <>
       <div className='m-2 sm:m-5 xl:m-10'>
@@ -95,10 +186,13 @@ const About = () => {
           <div className='mx-2 sm:mx-4 relative' data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
             <div className='absolute -bottom-[180px] md:-bottom-[150px] lg:-bottom-[140px] left-1/2 -translate-x-1/2 w-full max-w-7xl p-4 sm:p-10 xl:p-20 rounded-[20px] mx-auto flex flex-col md:flex-row items-center justify-center gap-4 text-[#fff] text-[14px] lg:text-[16px]' style={{ background: "radial-gradient(87.03% 87.03% at 39.58% 60.25%, rgba(255, 60, 103, 0.8) 0%, #EC1C24 100%)" }}>
               <div className='w-full md:w-1/3 flex items-center justify-start md:justify-center order-2 md:order-none'>
-                <a href="#"
-                  className="inline-block bg-gradient-to-l from-[#652D90] to-[#9000FF] hover:bg-gradient-to-l hover:from-[#9000FF] hover:to-[#652D90] transition-all duration-500 ease-in-out text-white px-6 lg:px-10 py-2 lg:py-4 rounded-full">
+                <button
+                  onClick={() => setIsOpenModal(true)}
+                  className="inline-block mt-4 bg-gradient-to-l from-[#652D90] to-[#9000FF] hover:bg-gradient-to-l hover:from-[#9000FF] hover:to-[#652D90] transition-all duration-300 text-white px-6 lg:px-10 py-2 lg:py-4 rounded-full"
+                >
                   ចុះឈ្មោះឥឡូវនេះ
-                </a>
+                </button>
+
               </div>
               <div className='w-full md:w-2/3 order-1 md:order-none'>
                 <div className='max-w-[700px] mx-auto text-start text-[13px] md:text-[14px] xl:text-[16px] flex flex-col space-y-2'>
@@ -113,11 +207,115 @@ const About = () => {
         </div>
       </div>
 
+      {isOpenModal && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-[999]">
+          <div className="bg-white p-6 rounded-lg shadow-lg max-w-md w-full relative scale-100 opacity-100 transition-all duration-300 animate-[fadeIn_0.3s_ease-in-out]">
+            <button
+              onClick={() => setIsOpenModal(false)}
+              className="absolute top-2 right-4 text-[#EC1C24] text-2xl"
+            >
+              &times;
+            </button>
+
+            <form onSubmit={handleSubmit}>
+              <div className="mt-4">
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your name"
+                  className="mt-1 w-full border border-gray-300 rounded-md px-3 py-2 text-sm"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <label htmlFor="gender" className="block text-sm font-medium text-gray-700">
+                Gender
+              </label>
+              <select
+                id="gender"
+                name="gender"
+                value={formData.gender}
+                onChange={handleChange}
+                required
+                className="mt-1 w-full border border-gray-300 rounded-md px-3 py-2 text-sm bg-white"
+              >
+                <option value="" disabled>
+                  Select Gender
+                </option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>
+
+              <div className="mt-4">
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Your email"
+                  className="mt-1 w-full border border-gray-300 rounded-md px-3 py-2 text-sm"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div className="mt-4">
+                <label htmlFor="phone_number" className="block text-sm font-medium text-gray-700">
+                  Phone Number
+                </label>
+                <input
+                  type="text"
+                  id="phone_number"
+                  name="phone_number"
+                  placeholder="Your Phone Number"
+                  className="mt-1 w-full border border-gray-300 rounded-md px-3 py-2 text-sm"
+                  value={formData.phone_number}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div className="mt-4">
+                <label htmlFor="address" className="block text-sm font-medium text-gray-700">
+                  Address
+                </label>
+                <textarea
+                  id="address"
+                  name="address"
+                  placeholder="Your Address"
+                  className="mt-1 w-full border border-gray-300 rounded-md px-3 py-2 text-sm"
+                  rows="3"
+                  value={formData.address}
+                  onChange={handleChange}
+                  required
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                disabled={isSending}
+                className="block font-[600] mt-4 px-8 py-3 float-end text-[#000] border border-[#EC1C24] hover:bg-[#EC1C24] hover:text-[#fff] transition-all duration-300 rounded-full"
+              >
+                {isSending ? 'Sending...' : 'Send'}
+              </button>
+            </form>
+          </div>
+        </div>
+      )}
+
+
       <div className='w-full h-[100vh] sm:h-[80vh] relative' >
         <div className='w-full h-full absolute top-[-60px] sm:top-[-100px] md:top-[-120px] lg:top-[-100px] 2xl:top-[-160px] left-1/2 -translate-x-1/2 pb-10 sm:pb-20' style={{ backgroundImage: `url(${Image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
           <div className='w-full h-full max-w-3xl mx-auto flex flex-col sm:flex-row items-end justify-end md:justify-center gap-6 sm:gap-10 px-2'>
             <div data-aos="fade-right" className='w-full p-6 xl:p-10 flex flex-col items-center justify-center text-center bg-linear-to-t from-[#FFFFFF] to-[#F5DEFF]/50 rounded-[30px] text-[13px] md:text-[14px] xl:text-[16px]'>
-              <img src={icon1} alt="" className='w-12 sm:w-20 h-auto'  />
+              <img src={icon1} alt="" className='w-12 sm:w-20 h-auto' />
               <h2 className='text-[20px] lg:text-[30px] font-[600]'>ចក្ខុវិស័យ</h2>
               <p className='h-[40px]'>ក្លាយជាសេវាកម្មដឹកជញ្ជូនឈានមុខគេ សម្រាប់ប្រជាជាតិខ្មែរ។</p>
             </div>

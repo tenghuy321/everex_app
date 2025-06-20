@@ -264,6 +264,7 @@ const TELEGRAM_CHAT_ID = '768856332';
 const Price = () => {
 
   const [selected, setSelected] = useState('month');
+  const [isSending, setIsSending] = useState(false);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone_number, SetPhone_number] = useState('');
@@ -280,8 +281,8 @@ const Price = () => {
   };
 
 
-  const sendToTelegram = async (plan, price, name, email) => {
-    const message = `New Plan Selected:\nPlan: ${plan}\nPrice: ${price}\nName: ${name}\nEmail: ${email}`;
+  const sendToTelegram = async (plan, price, name, email,phone_number,address) => {
+    const message = `NEW PLAN SELECTED: ${plan}\nPrice: ${price}\nName: ${name}\nEmail: ${email}\nPhone Number: ${phone_number}\nAddress: ${address}`;
 
     const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
 
@@ -324,6 +325,8 @@ const Price = () => {
         progress: undefined,
         theme: "colored",
       });
+    } finally {
+      setIsSending(false);
     }
   };
 
@@ -623,7 +626,7 @@ const Price = () => {
             <p className='text-[13px] md:text-[14px] xl:text-[16px]'>យើងមានគម្រោងសមាជិកមួយចំនួន ដែលជួយអោយអាជីវកម្មអ្នកសន្សំសំចៃលើសេវាដឹកប្រចាំថ្ងៃ និងបង្កើនប្រាក់ចំណេញដល់អាជីវកម្មអ្នក។</p>
           </div>
 
-          <div className='w-full flex flex-col items-center justify-center'  data-aos="fade-right">
+          <div className='w-full flex flex-col items-center justify-center'>
             <div className="inline-flex items-center justify-center rounded-full bg-white p-1 font-semibold mt-10">
               <button onClick={() => setSelected('month')} className={`px-4 sm:px-8 py-2 sm:py-3 rounded-full cursor-pointer transition-all duration-300 ${selected == 'month' ? 'bg-gradient-to-r from-[#EC1C24] to-[#FF3C67] text-white shadow-md text-[14px] md:text-[16px]' : 'text-[#EC1C24]'}`}>
                 ប្រចាំខែ
@@ -730,7 +733,7 @@ const Price = () => {
                           <div className="mt-4">
                             <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
                             <input
-                              type="text"
+                              type="email"
                               id="email"
                               name="email"
                               placeholder="Your email"
@@ -767,7 +770,7 @@ const Price = () => {
                           </div>
 
                           <button type="submit" className="block font-[600] mt-4 px-8 py-3 float-end text-[#000] border border-[#EC1C24] hover:bg-[#EC1C24] hover:text-[#fff] transition-all duration-300 rounded-full">
-                            Send
+                            {isSending ? 'Sending...' : 'Send'}
                           </button>
                         </form>
                       </div>
@@ -779,6 +782,7 @@ const Price = () => {
           </div>
         </div>
       </div>
+
       <div className="relative w-full overflow-hidden">
         <div className="scroller-track gap-2">
           <img src={price1} alt="" className="w-full h-[500px]" />
