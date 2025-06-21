@@ -15,7 +15,7 @@ const BottonSubmit = ({ isOpen, onClose }) => {
         email: '',
         phone_number: '',
         address: '',
-        gender: '' // radio gender
+        gender: ''
     });
 
     const [errors, setErrors] = useState({});
@@ -36,42 +36,8 @@ const BottonSubmit = ({ isOpen, onClose }) => {
         }));
     };
 
-    const validate = () => {
-        const newErrors = {};
-
-        if (!formData.name.trim()) newErrors.name = t('validation.required', { field: t('form.name') });
-        if (!formData.email.trim()) {
-            newErrors.email = t('validation.required', { field: t('form.email') });
-        } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-            newErrors.email = t('validation.invalidEmail');
-        }
-        if (!formData.phone_number.trim()) newErrors.phone_number = t('validation.required', { field: t('form.phone_number') });
-        if (!formData.address.trim()) newErrors.address = t('validation.required', { field: t('form.address') });
-        if (!formData.gender) newErrors.gender = t('validation.required', { field: t('form.gender') });
-
-
-        setErrors(newErrors);
-
-        return Object.keys(newErrors).length === 0;
-    };
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-
-        if (!validate()) {
-            toast.error(t('validation.fixErrors'), {
-                position: "top-right",
-                autoClose: 3000,
-                theme: "colored",
-            });
-            return;
-        }
-
-        setIsSending(true);
-
+    const sendToTelegram = async () => {
         const message = `📩 *New Form Submission:*\n👤 Name: ${formData.name}\n✉️ Email: ${formData.email}\n📱 Phone Number: ${formData.phone_number}\n⚧️ Gender: ${formData.gender}\n🏠 Address: ${formData.address}`;
-
-
         const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
 
         try {
@@ -124,11 +90,49 @@ const BottonSubmit = ({ isOpen, onClose }) => {
         }
     };
 
+    const validate = () => {
+        const newErrors = {};
+
+        if (!formData.name.trim()) newErrors.name = t('validation.required', { field: t('form.name') });
+        if (!formData.email.trim()) {
+            newErrors.email = t('validation.required', { field: t('form.email') });
+        } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+            newErrors.email = t('validation.invalidEmail');
+        }
+        if (!formData.phone_number.trim()) {
+            newErrors.phone_number = t('validation.required', { field: t('form.phone_number') });
+        } else if (!/^\d{9,15}$/.test(formData.phone_number)) {
+            newErrors.phone_number = t('validation.invalidPhone');
+        }
+        if (!formData.address.trim()) newErrors.address = t('validation.required', { field: t('form.address') });
+        if (!formData.gender) newErrors.gender = t('validation.required', { field: t('form.gender') });
+
+
+        setErrors(newErrors);
+
+        return Object.keys(newErrors).length === 0;
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        if (!validate()) {
+            toast.error(t('validation.fixErrors'), {
+                position: "top-right",
+                autoClose: 3000,
+                theme: "colored",
+            });
+            return;
+        }
+
+        // setIsSending(true);
+        sendToTelegram();
+    };
+
     if (!isOpen) return null;
 
     return (
         <>
-            <ToastContainer />
             <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-[999] px-2">
                 <div className="bg-white p-6 rounded-lg shadow-lg max-w-md w-full relative scale-100 opacity-100 transition-all duration-300 animate-[fadeIn_0.3s_ease-in-out]">
                     <button
@@ -244,6 +248,8 @@ const BottonSubmit = ({ isOpen, onClose }) => {
                     </form>
                 </div>
             </div>
+            <ToastContainer />
+
         </>
     );
 };

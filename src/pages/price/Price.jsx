@@ -23,7 +23,6 @@ const Price = () => {
 
   const [isOpenModal, setIsOpenModal] = useState(false);
   const [selected, setSelected] = useState('month');
-  const [isSending, setIsSending] = useState(false);
   const [name, setName] = useState('');
   const [gender, setGender] = useState('');
   const [email, setEmail] = useState('');
@@ -40,6 +39,8 @@ const Price = () => {
     SetPhone_number('');
     SetAddress('');
   };
+  const [isSending, setIsSending] = useState(false);
+
 
 
   const sendToTelegram = async (plan, price, name, gender, email, phone_number, address) => {
@@ -600,7 +601,11 @@ const Price = () => {
                             {errors.address && <p className="text-red-500 text-sm mt-1">{errors.address}</p>}
                           </div>
 
-                          <button type="submit" className="block font-[600] mt-4 text-[14px] md:text-[16px] px-6 py-2 md:px-8 md:py-3 float-end text-[#652D90] border border-[#652D90] hover:bg-[#652D90] hover:text-[#fff] transition-all duration-300 rounded-full">
+                          <button
+                            type="submit"
+                            disabled={isSending}
+                            className="block font-[600] mt-4 text-[14px] md:text-[16px] px-6 py-2 md:px-8 nd:py-3 float-end text-[#000] border border-[#652D90] hover:bg-[#652D90] hover:text-[#fff] transition-all duration-300 rounded-full"
+                          >
                             {isSending ? t('form.sending') : t('form.send')}
                           </button>
                         </form>

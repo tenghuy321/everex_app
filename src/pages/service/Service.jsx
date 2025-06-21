@@ -182,14 +182,14 @@ const Service = () => {
             <div className='w-full pt-24 md:pt-32 px-2 md:px-10 xl:px-20 flex flex-wrap gap-4 items-stretch justify-center'>
               <div className='w-full md:w-[48%] flex flex-col items-start text-[16px] font-[500]'>
                 <h1 className='font-[600]'>ទទួលដល់ទីតាំង 2 ជើង/ថ្ងៃ</h1>
-                <ul className='list-disc text-[14px] xl:text-[16px] ml-6'>
+                <ul className='list-disc text-[14px] xl:text-[16px] font-[300] ml-6'>
                   <li>វេនព្រឹក: ម៉ោង 8:00 – 8:30</li>
                   <li>វេនរសៀល: ម៉ោង 1:00 – 2:30</li>
                 </ul>
               </div>
               <div className='w-full md:w-[48%] flex flex-col items-start text-[16px] font-[500]'>
                 <h1 className='font-[600]'>ឃ្លាំងស្តុកទំនិញ</h1>
-                <ul className='list-disc text-[14px] xl:text-[16px] ml-6'>
+                <ul className='list-disc text-[14px] xl:text-[16px] font-[300] ml-6'>
                   <li>ផ្តល់ជូនទីតាំងស្តុកទំនិញដោយមិនគិតថ្លៃ សម្រាប់អតិថិជនផ្ញើស្តុក ឬនៅតាមបណ្តាខេត</li>
                   <li>មានក្រុមការងារវេចខ្ចប់ បន្ទាប់ទទួលបានការបញ្ជាកម្ម៉ង់ពីអតិថិជន</li>
                   <li>ប្រព័ន្ធផ្ញើរបាយការណ៍ស្តុកប្រចាំថ្ងៃ</li>
@@ -197,14 +197,14 @@ const Service = () => {
               </div>
               <div className='w-full md:w-[48%] flex flex-col items-start text-[16px] font-[500]'>
                 <h1 className='font-[600]'>ការប្រមូលប្រាក់ជំនួស</h1>
-                <ul className='list-disc text-[14px] xl:text-[16px] ml-6'>
+                <ul className='list-disc text-[14px] xl:text-[16px] font-[300] ml-6'>
                   <li>ប្រមូលប្រាក់ជំនួសដោយមិនគិតថ្លៃ</li>
                   <li>ទូទាត់ត្រឡប់រហ័សនៅថ្ងៃបន្ទាប់</li>
                 </ul>
               </div>
               <div className='w-full md:w-[48%] flex flex-col items-start text-[16px] font-[500]'>
                 <h1 className='font-[600]'>របាយការណ៍ និងអេបទូរស័ព្ទដៃ</h1>
-                <ul className='list-disc text-[14px] xl:text-[16px] ml-6'>
+                <ul className='list-disc text-[14px] xl:text-[16px] font-[300] ml-6'>
                   <li>ប្រព័ន្ធរៀបចំ និងផ្ញើររបាយការណ៍ជូនអតិថិជនប្រចាំថ្ងៃ/ប្រចាំអាទិត្យ/ប្រចាំខែ</li>
                   <li>អេបទូរស័ព្ទដៃសម្រាប់តាមដានកញ្ចប់អីវ៉ាន</li>
                   <li>ប្រព័ន្ធថែរក្សាអតិថិជន CRM សម្រាប់វិភាគនិងពង្រឹងអាជីវកម្មរបស់អតិថិជន</li>
@@ -212,7 +212,7 @@ const Service = () => {
               </div>
               <div className='w-full md:w-[97%] flex flex-col items-start text-[16px] font-[500]'>
                 <h1 className='font-[600]'>ដំណើរការដឹកជញ្ជូន</h1>
-                <ul className='list-disc text-[14px] xl:text-[16px] ml-6'>
+                <ul className='list-disc text-[14px] xl:text-[16px] font-[300] ml-6'>
                   <li>ពេលកញ្ចប់ដឹកបានជោគជ័យ ប្រព័ន្ធផ្ញើរសារជូនដំណឹងក្នុងគ្រុបតេឡេក្រាម</li>
                   <li>ពេលកញ្ចប់មានបញ្ហា មិនអាចទាក់ទងបាន ឬមានបញ្ហាណាមួយ ប្រព័ន្ធផ្ញើរសារជូនដំណឹង និងមានក្រុមការងារចាំសម្របសម្រួល 1-2-1</li>
                   <li>បើកញ្ចប់ទំនិញមិនទាន់ទៅដល់ដៃភ្ញៀវ ហាង ឬភ្ញៀវលុបចោលការដឹក នឹងបញ្ជូនត្រឡប់ទៅហាងវិញដោយមិនគិតថ្លៃសេវា</li>
@@ -232,7 +232,7 @@ const Service = () => {
             <div key={index} className='flex flex-col items-stretch justify-center w-full sm:w-[48%] lg:w-[30%] min-h-[200px] text-[30px] xl:text-[40px] p-6 rounded-[30px] text-[#fff] bg-[linear-gradient(-200deg,_#FFFFFF_-17.86%,_#F17AA9_30.46%,_#F0668C_41.69%,_#EE3E54_66.42%,_#EC2531_84.4%,_#EC1C24_94.51%)]'>
               <h1 className='font-[600]'>{spacialItem.id}</h1>
               <h2 className='text-[16px] xl:text-[20px] font-[600]'>{spacialItem.title}</h2>
-              <p className='text-[13px] md:text-[14px] xl:text-[16px]'>{spacialItem.desc}</p>
+              <p className='text-[13px] md:text-[14px] xl:text-[16px] font-[300]'>{spacialItem.desc}</p>
             </div>
           ))}
 
