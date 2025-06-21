@@ -178,7 +178,7 @@ const Service = () => {
         </div>
 
         <div className='px-2'>
-          <div className='relative px-2 rounded-[30px] -top-[70px] md:-top-[100px] w-full min-h-[100vh] md:min-h-[75vh] 2xl:min-h-[30vh] z-10 border-2 border-[#FFC3E0] max-w-7xl mx-auto flex flex-col items-end justify-end pb-10 bg-linear-to-tr from-[#EC1C24] to-[#F0668C]/50'>
+          <div className='relative px-2 rounded-[30px] -top-[70px] md:-top-[100px] w-full min-h-[95vh] md:min-h-[75vh] 2xl:min-h-[30vh] z-10 border-2 border-[#FFC3E0] max-w-7xl mx-auto flex flex-col items-end justify-end pb-10 bg-linear-to-tr from-[#EC1C24] to-[#F0668C]/50'>
             <div className='w-full pt-24 md:pt-32 px-2 md:px-10 xl:px-20 flex flex-wrap gap-4 items-stretch justify-center'>
               <div className='w-full md:w-[48%] flex flex-col items-start text-[16px] font-[500]'>
                 <h1 className='font-[600]'>ទទួលដល់ទីតាំង 2 ជើង/ថ្ងៃ</h1>
