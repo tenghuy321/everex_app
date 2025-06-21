@@ -502,7 +502,7 @@ const Price = () => {
                         </button>
 
                         <form onSubmit={(e) => handleSubmit(e, priceItem)} noValidate>
-                          <div className='flex items-center justify-between mt-5 py-2 rounded-md shadow-md'>
+                          <div className='flex items-center justify-between mt-5 py-2 rounded-md shadow-md p-1'>
                             <h1 className='text-[20px] lg:text-[30px] font-[500] text-[#652D90]'>{priceItem.plan}</h1>
                             <h2 className='text-[20px] md:text-[30px] text-[#652D90]'>{priceItem.price} <span className='text-[14px] md:text-[20px] text-[#000]/50'>/{selected === 'month' ? 'ខែ' : 'ឆ្នាំ'}</span></h2>
                           </div>
