@@ -124,13 +124,13 @@ const About = () => {
       <div className='w-full h-[80vh] relative' >
         <div className='w-full h-full absolute top-[-60px] sm:top-[-100px] md:top-[-120px] lg:top-[-100px] 2xl:top-[-160px] left-1/2 -translate-x-1/2 pb-10 sm:pb-32' style={{ backgroundImage: `url(${Image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
           <div className='w-full h-full max-w-3xl mx-auto flex flex-col sm:flex-row items-end justify-end md:justify-center gap-6 sm:gap-10 px-2 overflow-hidden'>
-            <div data-aos="fade-right" className='w-full h-[130px] sm:h-[200px] md:h-[210px] p-6 xl:p-10 flex flex-col items-center justify-center text-center bg-linear-to-t from-[#FFFFFF] to-[#F5DEFF]/50 border border-[#fff] rounded-[30px] text-[13px] md:text-[14px] xl:text-[16px] font-[300]'>
+            <div data-aos="fade-right" className='w-full h-[140px] sm:h-[200px] md:h-[210px] p-6 xl:p-10 flex flex-col items-center justify-center text-center bg-linear-to-t from-[#FFFFFF] to-[#F5DEFF]/50 border border-[#fff] rounded-[30px] text-[13px] md:text-[14px] xl:text-[16px] font-[300]'>
               <img src={icon1} alt="" className='w-14 sm:w-20 h-auto' />
               <h2 className='text-[20px] lg:text-[30px] font-[600]'>ចក្ខុវិស័យ</h2>
               <p className='h-[40px]'>ក្លាយជាសេវាកម្មដឹកជញ្ជូនឈានមុខគេ សម្រាប់ប្រជាជាតិខ្មែរ។</p>
             </div>
 
-            <div data-aos="fade-left" className='w-full h-[130px] sm:h-[200px] md:h-[210px] p-6 xl:p-10 flex flex-col items-center justify-center text-center bg-linear-to-t from-[#FFFFFF] to-[#F5DEFF]/50 border border-[#fff] rounded-[30px] text-[13px] md:text-[14px] xl:text-[16px] font-[300]'>
+            <div data-aos="fade-left" className='w-full h-[140px] sm:h-[200px] md:h-[210px] p-6 xl:p-10 flex flex-col items-center justify-center text-center bg-linear-to-t from-[#FFFFFF] to-[#F5DEFF]/50 border border-[#fff] rounded-[30px] text-[13px] md:text-[14px] xl:text-[16px] font-[300]'>
               <img src={icon2} alt="" className='w-14 sm:w-20 h-auto' />
               <h2 className='text-[20px] lg:text-[30px] font-[600]'>បេសកកម្ម</h2>
               <p className='h-[40px]'>ជំរុញការធ្វើទំនើបកម្ម និងស្វ័យប្រវត្តិកម្មលើវិស័យដឹកជញ្ជូនក្នុង ព្រះរាជាណាចក្រកម្ពុជា។</p>
