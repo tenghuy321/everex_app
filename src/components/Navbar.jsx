@@ -49,19 +49,19 @@ const Navbar = () => {
           <div className={`absolute top-[50px] right-0 w-full bg-white/50 backdrop-blur-[50px] rounded-[30px] shadow-lg transition-all duration-500 ease-in-out ${isOpen ? 'max-h-fit opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
             <ul className='flex flex-col items-center justify-center space-y-2 md:space-y-10 p-4 text-[16px] font-[500] my-2 md:my-10'>
               <li className='w-full h-full'>
-                <NavLink to='/' className={({ isActive }) => `block px-4 py-4 rounded-full ${isActive ? 'bg-linear-to-r from-[#652D90] to-[#9000FF] text-[#fff]' : 'text-[#EC1C24]'}`}>{t("home")}</NavLink>
+                <NavLink to='/' className={({ isActive }) => `block px-4 py-4 rounded-full ${isActive ? 'bg-linear-to-r from-[#652D90] to-[#9000FF] text-[#fff]' : 'text-[#652D90]'}`}>{t("home")}</NavLink>
               </li>
               <li className='w-full h-full'>
-                <NavLink to='/about-us' className={({ isActive }) => `block px-4 py-4 rounded-full ${isActive ? 'bg-linear-to-r from-[#652D90] to-[#9000FF] text-[#fff]' : 'text-[#EC1C24]'}`}>{t("about")}</NavLink>
+                <NavLink to='/about-us' className={({ isActive }) => `block px-4 py-4 rounded-full ${isActive ? 'bg-linear-to-r from-[#652D90] to-[#9000FF] text-[#fff]' : 'text-[#652D90]'}`}>{t("about")}</NavLink>
               </li>
               <li className='w-full h-full'>
-                <NavLink to='/service' className={({ isActive }) => `block px-4 py-4 rounded-full ${isActive ? 'bg-linear-to-r from-[#652D90] to-[#9000FF] text-[#fff]' : 'text-[#EC1C24]'}`}>{t("service")}</NavLink>
+                <NavLink to='/service' className={({ isActive }) => `block px-4 py-4 rounded-full ${isActive ? 'bg-linear-to-r from-[#652D90] to-[#9000FF] text-[#fff]' : 'text-[#652D90]'}`}>{t("service")}</NavLink>
               </li>
               <li className='w-full h-full'>
-                <NavLink to='/price' className={({ isActive }) => `block px-4 py-4 rounded-full ${isActive ? 'bg-linear-to-r from-[#652D90] to-[#9000FF] text-[#fff]' : 'text-[#EC1C24]'}`}>{t("price")}</NavLink>
+                <NavLink to='/price' className={({ isActive }) => `block px-4 py-4 rounded-full ${isActive ? 'bg-linear-to-r from-[#652D90] to-[#9000FF] text-[#fff]' : 'text-[#652D90]'}`}>{t("price")}</NavLink>
               </li>
               <li className='w-full h-full'>
-                <NavLink to='/contact' className={({ isActive }) => `block px-4 py-4 rounded-full ${isActive ? 'bg-linear-to-r from-[#652D90] to-[#9000FF] text-[#fff]' : 'text-[#EC1C24]'}`}>{t("contact")}</NavLink>
+                <NavLink to='/contact' className={({ isActive }) => `block px-4 py-4 rounded-full ${isActive ? 'bg-linear-to-r from-[#652D90] to-[#9000FF] text-[#fff]' : 'text-[#652D90]'}`}>{t("contact")}</NavLink>
               </li>
             </ul>
           </div>
