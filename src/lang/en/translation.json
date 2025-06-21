@@ -6,6 +6,31 @@
   "contact": "ទំនាក់ទំនង",
   "khmer" : "Khmer",
 
+  "validation": {
+    "required": "{{field}} is required",
+    "invalidEmail": "Email is invalid",
+    "invalidPhone": "Phone number must be 9 to 15 digits",
+    "fixErrors": "Please fix the errors in the form.",
+    "success": "Message sent successfully!",
+    "fail": "Failed to send message. Please try again later."
+  },
+  "form": {
+    "name": "Name",
+    "email": "Email",
+    "phone_number": "Phone Number",
+    "address": "Address",
+    "gender": "Gender",
+    "male": "Male",
+    "female": "Female",
+    "other": "Other",
+    "placeholder_name": "Your name",
+    "placeholder_email": "Your Email",
+    "placeholder_address": "Your Address",
+    "placeholder_phone_number": "Your Phone Number",
+    "send": "Send",
+    "sending": "Sending..."
+  },
+
   "home_title" : "Welcome to",
   "home_title1" : "EVEREX EXPRESS",
   "home_des1" : "អេវើរេក អិចប្រេស យើងខ្ញុំជាក្រុមហ៊ុនសេវាកម្មដឹកជញ្ជូន លឿន និងសុវត្ថិភាព ដើម្បីជំរុញការរីកចម្រើនអាជីវកម្មរបស់អ្នក! ជាមួយនិងជម្រើសដឹកជញ្ជូនទំនិញដ៏ឆ្លាតវៃ សម្រាប់ម្ចាស់អាជីវកម្មនៅរាជធានីភ្នំពេញ ដឹកជញ្ជូនជាមួយ អេវើរេក អិចប្រេស",
@@ -28,7 +53,6 @@
   "service_title7" : "មានអេបទូរស័ព្ទ តាមដានអីវ៉ាន់ ភ្ជាប់ជាមួយប្រព័ន្ធ CRM ជួយពង្រឹង អាជីរកម្ម",
   "service_title8" : "មានឃ្លាំងស្តុកទំនិញ សម្រាប់អាជីវកម្ម តាមខេត្ត/ភ្នំពេញ",
 
-
   "item1" : "ទំនិញអនឡាញ សម្លៀកបំពាក់ ស្បែកជើង សម្ភារប្រើប្រាស់",
   "item2" : "កញ្ចប់អីវ៉ាន់ក្រោម 5គីឡូ",
   "item3" : "ទំហំកញ្ចប់តូចជាង 25x25x25cm",
@@ -37,7 +61,6 @@
   "item6" : "គ្រឿងងាយបាក់បែក ងាយឆាបឆេះ ធាតុគីមី",
   "item7" : "អាវុធមុចស្រួច គ្រឿងផ្ទះ គ្រឿងញៀន",
   "item8" : "គ្រឿងអលង្ការមានតម្លៃ",
-
 
   "footer_title1" : "ទីតាំងការិយាល័យកណ្តាល",
   "footer_des1" : "ជាន់ទី ៧ អគារអាយអេសអាយ ភូមិត្រពាំងថ្លឹង ៣ សង្កាត់ចោមចៅ ខណ្ឌពោធិ៍សែនជ័យ រាជធានីភ្នំពេញ",

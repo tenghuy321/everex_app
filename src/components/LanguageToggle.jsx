@@ -20,7 +20,7 @@ const LanguageToggle = () => {
             <button
                 onClick={() => changeLanguage('en')}
                 className={`px-3 py-1 cursor-pointer rounded-full transition-all duration-300 ${
-                    i18n.language === 'en' ? 'bg-[#f17474] text-white shadow-sm' : 'text-black'
+                    i18n.language === 'en' ? 'bg-[#652D90] text-white shadow-sm' : 'text-[#652D90]'
                 }`}
             >
                 English
@@ -28,7 +28,7 @@ const LanguageToggle = () => {
             <button
                 onClick={() => changeLanguage('kh')}
                 className={`px-3 py-1 cursor-pointer rounded-full transition-all duration-300 ${
-                    i18n.language === 'kh' ? 'bg-[#f17474] text-white shadow-sm' : 'text-black'
+                    i18n.language === 'kh' ? 'bg-[#652D90] text-white shadow-sm' : 'text-[#652D90]'
                 }`}
             >
                 {t("khmer")}

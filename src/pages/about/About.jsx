@@ -16,11 +16,10 @@ import icon9 from '../../assets/images/about-icon/icon-9.png'
 import icon10 from '../../assets/images/about-icon/icon-10.png'
 
 import CEO from '../../assets/images/about/ceo.png'
+import BottonSubmit from '../../components/BottonSubmit'
 
 import Footer from '../../components/Footer'
 
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 const coreItems = [
   {
@@ -84,95 +83,9 @@ const WhyUsItems = [
 
 ]
 
-const TELEGRAM_BOT_TOKEN = '7488110118:AAF1yYnZwMivBG4iaNE-KkLm_o1BlDKbDcQ';
-const TELEGRAM_CHAT_ID = '768856332';
-
-
 const About = () => {
 
   const [isOpenModal, setIsOpenModal] = useState(false);
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone_number: '',
-    address: '',
-    gender: ''  // <-- new field
-  });
-
-  const [isSending, setIsSending] = useState(false);
-
-  const handleChange = (e) => {
-    setFormData(prev => ({
-      ...prev,
-      [e.target.name]: e.target.value
-    }));
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    setIsSending(true);
-
-    const message = `
-      New Form Submission:
-      Name: ${formData.name}
-      Email: ${formData.email}
-      Phone Number: ${formData.phone_number}
-      Gender: ${formData.gender}
-      Address: ${formData.address}
-    `;
-
-    const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
-
-    try {
-      const response = await fetch(url, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          chat_id: TELEGRAM_CHAT_ID,
-          text: message
-        })
-      });
-
-      if (!response.ok) {
-        throw new Error('Failed to send message');
-      }
-
-      toast.success('Message sent successfully!', {
-        position: "top-right",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "colored",
-      });
-      setIsOpenModal(false);
-      setFormData({
-        name: '',
-        email: '',
-        phone_number: '',
-        address: ''
-      });
-    } catch (error) {
-      console.error(error);
-      toast.error('Failed to send message. Please try again later.', {
-        position: "top-right",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "colored",
-      });
-    } finally {
-      setIsSending(false);
-    }
-  };
 
   return (
     <>
@@ -184,18 +97,17 @@ const About = () => {
           </div>
 
           <div className='mx-2 sm:mx-4 relative' data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
-            <div className='absolute -bottom-[180px] md:-bottom-[150px] lg:-bottom-[140px] left-1/2 -translate-x-1/2 w-full max-w-7xl p-4 sm:p-10 xl:p-20 rounded-[20px] mx-auto flex flex-col md:flex-row items-center justify-center gap-4 text-[#fff] text-[14px] lg:text-[16px]' style={{ background: "radial-gradient(87.03% 87.03% at 39.58% 60.25%, rgba(255, 60, 103, 0.8) 0%, #EC1C24 100%)" }}>
+            <div className='absolute -bottom-[180px] md:-bottom-[150px] lg:-bottom-[140px] left-1/2 -translate-x-1/2 w-full max-w-7xl p-4 sm:p-10 xl:p-20 rounded-[20px] mx-auto flex flex-col md:flex-row items-center justify-center gap-4 text-[#fff] text-[14px] lg:text-[16px] bg-[#652D90]'>
               <div className='w-full md:w-1/3 flex items-center justify-start md:justify-center order-2 md:order-none'>
                 <button
                   onClick={() => setIsOpenModal(true)}
-                  className="inline-block mt-4 bg-gradient-to-l from-[#652D90] to-[#9000FF] hover:bg-gradient-to-l hover:from-[#9000FF] hover:to-[#652D90] transition-all duration-300 text-white px-6 lg:px-10 py-2 lg:py-4 rounded-full"
+                  className="inline-block mt-4 bg-gradient-to-l from-[#EC1C24] to-[#e48c8f] hover:bg-gradient-to-l hover:from-[#e48c8f] hover:to-[#EC1C24] transition-all duration-300 text-white px-6 lg:px-10 py-2 lg:py-4 rounded-full"
                 >
                   ចុះឈ្មោះឥឡូវនេះ
                 </button>
-
               </div>
               <div className='w-full md:w-2/3 order-1 md:order-none'>
-                <div className='max-w-[700px] mx-auto text-start text-[13px] md:text-[14px] xl:text-[16px] flex flex-col space-y-2'>
+                <div className='max-w-[700px] mx-auto text-start text-[13px] md:text-[14px] xl:text-[16px] font-[300] flex flex-col space-y-2'>
                   <p>ក្រុមហ៊ុនដឹកជញ្ជូន everex exress ជាក្រុមហ៊ុនបង្កើតឡើងដោយកូនខ្មែរក្នុង ឆ្នាំ 2022 ក្នុងគោលបំណងលើកកម្ពស់វិស័យដឹកជញ្ជូនក្នុងស្រុក ផ្លាស់ប្តូរ បទពិសោធន៍នៃការដឹកជញ្ជូន តាមរយៈការធ្វើស្វ័យប្រវត្តិកម្ម លើប្រព័ន្ឋ ដឹកជញ្ជូន និងប្រព័ន្ធបច្ចេកវិទ្យាថ្មីៗ។</p>
 
                   <p>យើងខ្ញុំប្រកាន់ខ្ជាប់នូវគោលការក្រមសីលធម៌ ទំនួលខុសត្រូវលើគ្រប់ប្រតិបត្តិការ ដឹកជញ្ជូនទាំងអស់ ផ្តល់នូវទំនុកចិត្តរាល់ដៃគូសហការ ការផ្តល់នូវសេវាកម្មដែល ល្អបំផុតដល់អតិថិជន និងដំណោះស្រាយដឹកជញ្ជូនដ៏ត្រឹមត្រូវសម្រាប់អាជីវកម្ម របស់អ្នក ។</p>
@@ -207,121 +119,19 @@ const About = () => {
         </div>
       </div>
 
-      {isOpenModal && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-[999]">
-          <div className="bg-white p-6 rounded-lg shadow-lg max-w-md w-full relative scale-100 opacity-100 transition-all duration-300 animate-[fadeIn_0.3s_ease-in-out]">
-            <button
-              onClick={() => setIsOpenModal(false)}
-              className="absolute top-2 right-4 text-[#EC1C24] text-2xl"
-            >
-              &times;
-            </button>
-
-            <form onSubmit={handleSubmit}>
-              <div className="mt-4">
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Your name"
-                  className="mt-1 w-full border border-gray-300 rounded-md px-3 py-2 text-sm"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              <label htmlFor="gender" className="block text-sm font-medium text-gray-700">
-                Gender
-              </label>
-              <select
-                id="gender"
-                name="gender"
-                value={formData.gender}
-                onChange={handleChange}
-                required
-                className="mt-1 w-full border border-gray-300 rounded-md px-3 py-2 text-sm bg-white"
-              >
-                <option value="" disabled>
-                  Select Gender
-                </option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="other">Other</option>
-              </select>
-
-              <div className="mt-4">
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Your email"
-                  className="mt-1 w-full border border-gray-300 rounded-md px-3 py-2 text-sm"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              <div className="mt-4">
-                <label htmlFor="phone_number" className="block text-sm font-medium text-gray-700">
-                  Phone Number
-                </label>
-                <input
-                  type="text"
-                  id="phone_number"
-                  name="phone_number"
-                  placeholder="Your Phone Number"
-                  className="mt-1 w-full border border-gray-300 rounded-md px-3 py-2 text-sm"
-                  value={formData.phone_number}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              <div className="mt-4">
-                <label htmlFor="address" className="block text-sm font-medium text-gray-700">
-                  Address
-                </label>
-                <textarea
-                  id="address"
-                  name="address"
-                  placeholder="Your Address"
-                  className="mt-1 w-full border border-gray-300 rounded-md px-3 py-2 text-sm"
-                  rows="3"
-                  value={formData.address}
-                  onChange={handleChange}
-                  required
-                ></textarea>
-              </div>
-
-              <button
-                type="submit"
-                disabled={isSending}
-                className="block font-[600] mt-4 px-8 py-3 float-end text-[#000] border border-[#EC1C24] hover:bg-[#EC1C24] hover:text-[#fff] transition-all duration-300 rounded-full"
-              >
-                {isSending ? 'Sending...' : 'Send'}
-              </button>
-            </form>
-          </div>
-        </div>
-      )}
-
+      <BottonSubmit isOpen={isOpenModal} onClose={() => setIsOpenModal(false)} />
 
       <div className='w-full h-[100vh] sm:h-[80vh] relative' >
         <div className='w-full h-full absolute top-[-60px] sm:top-[-100px] md:top-[-120px] lg:top-[-100px] 2xl:top-[-160px] left-1/2 -translate-x-1/2 pb-10 sm:pb-20' style={{ backgroundImage: `url(${Image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
           <div className='w-full h-full max-w-3xl mx-auto flex flex-col sm:flex-row items-end justify-end md:justify-center gap-6 sm:gap-10 px-2'>
-            <div data-aos="fade-right" className='w-full p-6 xl:p-10 flex flex-col items-center justify-center text-center bg-linear-to-t from-[#FFFFFF] to-[#F5DEFF]/50 rounded-[30px] text-[13px] md:text-[14px] xl:text-[16px]'>
-              <img src={icon1} alt="" className='w-12 sm:w-20 h-auto' />
+            <div data-aos="fade-right" className='w-full h-[210px] p-6 xl:p-10 flex flex-col items-center justify-center text-center bg-linear-to-t from-[#FFFFFF] to-[#F5DEFF]/50 border border-[#fff] rounded-[30px] text-[13px] md:text-[14px] xl:text-[16px] font-[300]'>
+              <img src={icon1} alt="" className='w-14 sm:w-20 h-auto' />
               <h2 className='text-[20px] lg:text-[30px] font-[600]'>ចក្ខុវិស័យ</h2>
               <p className='h-[40px]'>ក្លាយជាសេវាកម្មដឹកជញ្ជូនឈានមុខគេ សម្រាប់ប្រជាជាតិខ្មែរ។</p>
             </div>
 
-            <div data-aos="fade-left" className='w-full p-6 xl:p-10 flex flex-col items-center justify-center text-center bg-linear-to-t from-[#FFFFFF] to-[#F5DEFF]/50 rounded-[30px] text-[13px] md:text-[14px] xl:text-[16px]'>
-              <img src={icon2} alt="" className='w-12 sm:w-20 h-auto' />
+            <div data-aos="fade-left" className='w-full h-[210px] p-6 xl:p-10 flex flex-col items-center justify-center text-center bg-linear-to-t from-[#FFFFFF] to-[#F5DEFF]/50 border border-[#fff] rounded-[30px] text-[13px] md:text-[14px] xl:text-[16px] font-[300]'>
+              <img src={icon2} alt="" className='w-14 sm:w-20 h-auto' />
               <h2 className='text-[20px] lg:text-[30px] font-[600]'>បេសកកម្ម</h2>
               <p className='h-[40px]'>ជំរុញការធ្វើទំនើបកម្ម និងស្វ័យប្រវត្តិកម្មលើវិស័យដឹកជញ្ជូនក្នុង ព្រះរាជាណាចក្រកម្ពុជា។</p>
             </div>
@@ -330,20 +140,20 @@ const About = () => {
       </div>
 
       <div className='w-full h-full relative'>
-        <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" className='relative flex items-center justify-center pb-10 sm:pb-0 sm:absolute top-0 sm:top-[-150px] 2xl:top-[-210px] left-1/2 -translate-x-1/2'>
-          <img src={icon3} alt="" className='w-12 sm:w-20 h-auto' />
+        <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" className='relative flex items-center justify-center pb-10 sm:pb-0 sm:absolute top-0 sm:top-[-150px] md:top-[-140px] 2xl:top-[-150px] left-1/2 -translate-x-1/2'>
+          <img src={icon3} alt="" className='w-14 sm:w-20 h-auto' />
         </div>
-        <div className='flex flex-col items-center justify-center max-w-6xl mx-auto text-center px-2 text-[13px] md:text-[14px] xl:text-[16px]'>
+        <div className='relative 2xl:-mt-[4rem] flex flex-col items-center justify-center max-w-6xl mx-auto text-center px-2 text-[13px] md:text-[14px] xl:text-[16px]'>
           <h1 data-aos="fade-up" className='text-[20px] lg:text-[30px] font-[600] text-[#EC1C24]'>គុណតម្លៃស្នូល</h1>
           <p data-aos="fade-up">ទំនុកចិត្ត ក្រមសីលធម៌ ស្វ័យប្រវត្តិកម្ម ដៃគូយុទ្ធសាស្ត្រ អាជីវកម្ម។</p>
-          <p data-aos="fade-up" className='mt-4'>ក្រុមហ៊ុន អេវើរេក អិចប្រេស គុណតម្លៃស្នូលគឺជាមូលដ្ឋាននៃរាល់សកម្មភាពដែលយើងអនុវត្ត។ គុណតម្លៃទាំងនេះជាគោលដៅដ៏សំខាន់ក្នុងការប្រតិបត្តិការរបស់យើង បញ្ជាក់ពីការចេះគោរពដល់ដៃគូ និងបញ្ជាក់ពីការប្តេជ្ញាខ្ជាប់ខ្ជួនរបស់យើងចំពោះភាពឯកទេស និងការច្នៃប្រឌិតក្នុងវិស័យដឹកជញ្ជូននៅក្នុងព្រះរាជាណាចក្រកម្ពុជា។</p>
+          <p data-aos="fade-up" className='mt-4 font-[300]'>ក្រុមហ៊ុន អេវើរេក អិចប្រេស គុណតម្លៃស្នូលគឺជាមូលដ្ឋាននៃរាល់សកម្មភាពដែលយើងអនុវត្ត។ គុណតម្លៃទាំងនេះជាគោលដៅដ៏សំខាន់ក្នុងការប្រតិបត្តិការរបស់យើង បញ្ជាក់ពីការចេះគោរពដល់ដៃគូ និងបញ្ជាក់ពីការប្តេជ្ញាខ្ជាប់ខ្ជួនរបស់យើងចំពោះភាពឯកទេស និងការច្នៃប្រឌិតក្នុងវិស័យដឹកជញ្ជូននៅក្នុងព្រះរាជាណាចក្រកម្ពុជា។</p>
 
 
           <div data-aos="fade-up" className='w-full flex flex-wrap items-stretch justify-center gap-6 text-[#fff] text-[13px] md:text-[14px] xl:text-[16px] my-6'>
             {coreItems.map((coreItem, index) => (
               <div key={index} className='w-full sm:w-[48%] lg:w-[30%] h-[200px] lg:h-[240px] hover:translate-y-[-5px] transition-all duration-300 text-start p-6 bg-gradient-to-r from-[#652D90] to-[#9000FF] rounded-[30px]'>
                 <h1 className='text-[20px] font-[500]'>{coreItem.title}</h1>
-                <p className='mt-2'>{coreItem.description}</p>
+                <p className='mt-2 font-[300]'>{coreItem.description}</p>
               </div>
             ))}
           </div>
@@ -382,7 +192,7 @@ const About = () => {
               <div key={index} className='p-4 w-full sm:w-[48%] lg:w-[23%] h-[200px] xl:h-[250px] bg-[#fff] text-[#652D90] flex flex-col items-center justify-start text-center rounded-[30px]'>
                 <img src={WhyUsItem.image} alt="" className='w-16 h-auto' />
                 <h1 className='font-[600] pt-4'>{WhyUsItem.title}</h1>
-                <p>{WhyUsItem.description}</p>
+                <p className='font-[300]'>{WhyUsItem.description}</p>
               </div>
             ))}
           </div>

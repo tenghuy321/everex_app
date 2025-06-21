@@ -10,7 +10,7 @@
     bottom: -4px;
     width: 0;
     height: 2px;
-    background-color: #EC1C24;
+    background-color: #fff;
     transition: width 0.3s ease, background-color 0.3s ease;
 
 }

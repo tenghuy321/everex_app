@@ -24,7 +24,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #ec1c24;
+  border: 1px solid #652D90;
   letter-spacing: 1.5px;
   transition: all 200ms ease-in-out;
   border-radius: 30px;
@@ -33,7 +33,7 @@
 .custom-btn:before {
   content: "";
   position: absolute;
-  border: 1px solid #ec1c24;
+  border: 1px solid #652D90;
   transition: all 200ms ease-in-out;
   opacity: 0;
 }
@@ -65,4 +65,10 @@
 
 .animate-fadeIn {
   animation: fadeIn 0.3s ease-out;
+}
+
+.Toastify__toast {
+  font-family: 'Kantumruy Pro', sans-serif !important;
+  font-size: 16px; /* optional */
+  font-weight: 500; /* optional */
 }

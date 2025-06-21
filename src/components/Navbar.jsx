@@ -15,19 +15,19 @@ const Navbar = () => {
         <img src={Logo} alt="" className='w-16 md:w-20 h-auto' />
         <ul className='hidden lg:flex items-center justify-center gap-4 text-[16px] font-[500]'>
           <li>
-            <NavLink to='/' className={({ isActive }) => `w-full px-6 xl:px-8 py-3 xl:py-4 rounded-full hover:bg-linear-to-r hover:from-[#652D90] hover:to-[#9000FF] hover:text-[#fff] transition-all duration-300 ${isActive ? 'bg-linear-to-r from-[#652D90] to-[#9000FF] text-[#fff]' : 'text-[#EC1C24]'}`}>{t("home")}</NavLink>
+            <NavLink to='/' className={({ isActive }) => `w-full px-6 xl:px-8 py-3 xl:py-4 rounded-full hover:bg-linear-to-r hover:from-[#652D90] hover:to-[#9000FF] hover:text-[#fff] transition-all duration-300 ${isActive ? 'bg-linear-to-r from-[#652D90] to-[#9000FF] text-[#fff]' : 'text-[#652D90]'}`}>{t("home")}</NavLink>
           </li>
           <li>
-            <NavLink to='/about-us' className={({ isActive }) => `w-full px-6 xl:px-8 py-3 xl:py-4 rounded-full hover:bg-linear-to-r hover:from-[#652D90] hover:to-[#9000FF] hover:text-[#fff] transition-all duration-300 ${isActive ? 'bg-linear-to-r from-[#652D90] to-[#9000FF] text-[#fff]' : 'text-[#EC1C24]'}`}>{t("about")}</NavLink>
+            <NavLink to='/about-us' className={({ isActive }) => `w-full px-6 xl:px-8 py-3 xl:py-4 rounded-full hover:bg-linear-to-r hover:from-[#652D90] hover:to-[#9000FF] hover:text-[#fff] transition-all duration-300 ${isActive ? 'bg-linear-to-r from-[#652D90] to-[#9000FF] text-[#fff]' : 'text-[#652D90]'}`}>{t("about")}</NavLink>
           </li>
           <li>
-            <NavLink to='/service' className={({ isActive }) => `w-full px-6 xl:px-8 py-3 xl:py-4 rounded-full hover:bg-linear-to-r hover:from-[#652D90] hover:to-[#9000FF] hover:text-[#fff] transition-all duration-300 ${isActive ? 'bg-linear-to-r from-[#652D90] to-[#9000FF] text-[#fff]' : 'text-[#EC1C24]'}`}>{t("service")}</NavLink>
+            <NavLink to='/service' className={({ isActive }) => `w-full px-6 xl:px-8 py-3 xl:py-4 rounded-full hover:bg-linear-to-r hover:from-[#652D90] hover:to-[#9000FF] hover:text-[#fff] transition-all duration-300 ${isActive ? 'bg-linear-to-r from-[#652D90] to-[#9000FF] text-[#fff]' : 'text-[#652D90]'}`}>{t("service")}</NavLink>
           </li>
           <li>
-            <NavLink to='/price' className={({ isActive }) => `w-full px-6 xl:px-8 py-3 xl:py-4 rounded-full hover:bg-linear-to-r hover:from-[#652D90] hover:to-[#9000FF] hover:text-[#fff] transition-all duration-300 ${isActive ? 'bg-linear-to-r from-[#652D90] to-[#9000FF] text-[#fff]' : 'text-[#EC1C24]'}`}>{t("price")}</NavLink>
+            <NavLink to='/price' className={({ isActive }) => `w-full px-6 xl:px-8 py-3 xl:py-4 rounded-full hover:bg-linear-to-r hover:from-[#652D90] hover:to-[#9000FF] hover:text-[#fff] transition-all duration-300 ${isActive ? 'bg-linear-to-r from-[#652D90] to-[#9000FF] text-[#fff]' : 'text-[#652D90]'}`}>{t("price")}</NavLink>
           </li>
           <li>
-            <NavLink to='/contact' className={({ isActive }) => `w-full px-6 xl:px-8 py-3 xl:py-4 rounded-full hover:bg-linear-to-r hover:from-[#652D90] hover:to-[#9000FF] hover:text-[#fff] transition-all duration-300 ${isActive ? 'bg-linear-to-r from-[#652D90] to-[#9000FF] text-[#fff]' : 'text-[#EC1C24]'}`}>{t("contact")}</NavLink>
+            <NavLink to='/contact' className={({ isActive }) => `w-full px-6 xl:px-8 py-3 xl:py-4 rounded-full hover:bg-linear-to-r hover:from-[#652D90] hover:to-[#9000FF] hover:text-[#fff] transition-all duration-300 ${isActive ? 'bg-linear-to-r from-[#652D90] to-[#9000FF] text-[#fff]' : 'text-[#652D90]'}`}>{t("contact")}</NavLink>
           </li>
         </ul>
         <div className='flex items-center gap-4'>
