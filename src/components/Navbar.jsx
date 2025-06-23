@@ -11,7 +11,7 @@ const Navbar = () => {
 
   return (
     <div className='mx-2 relative'>
-      <nav className='flex items-center justify-between w-full max-w-7xl mx-auto absolute border border-white top-[20px] z-[50] rounded-full left-1/2 -translate-x-1/2 py-1 xl:py-3 px-6 bg-linear-to-t from-[#fff] to-[#F5DEFF]/50'>
+      <nav className='flex items-center justify-between w-full max-w-7xl mx-auto absolute border border-white top-[20px] z-[50] rounded-full left-1/2 -translate-x-1/2 py-1 xl:py-3 px-4 sm:px-6 bg-linear-to-t from-[#fff] to-[#F5DEFF]/50'>
         <img src={Logo} alt="" className='w-16 md:w-20 h-auto' />
         <ul className='hidden lg:flex items-center justify-center gap-4 text-[16px] font-[500]'>
           <li>

@@ -85,7 +85,7 @@ const Home = () => {
             </button>
           </div>
 
-          <div data-aos="fade-left">
+          <div data-aos="zoom-in-down" data-aos-duration="5000">
             <img src={HomeImage} alt="" />
           </div>
         </div>
