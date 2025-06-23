@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 const LanguageToggle = () => {
@@ -10,10 +10,10 @@ const LanguageToggle = () => {
         }
     };
 
-    useEffect(() => {
-        document.body.style.fontFamily =
-            i18n.language === 'kh' ? "'Kantumruy Pro', sans-serif" : "'Inter', sans-serif";
-    }, [i18n.language]);
+    // useEffect(() => {
+    //     document.body.style.fontFamily =
+    //         i18n.language === 'kh' ? "'Kantumruy Pro', sans-serif" : "'Inter', sans-serif";
+    // }, [i18n.language]);
 
     return (
         <div className="inline-flex items-center rounded-full bg-white p-1 text-[12px] md:text-[14px] font-medium">

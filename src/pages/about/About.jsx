@@ -95,7 +95,7 @@ const About = () => {
         <div className='w-full h-[60vh] sm:h-[70vh] lg:h-[80vh] xl:h-[90vh] relative rounded-[20px] z-[50]' style={{ backgroundImage: `url(${bgImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
           <Navbar />
           <div className='w-full h-full flex flex-col items-center justify-center text-[#fff]' data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
-            <h2 className='text-[30px] sm:text-[40px] lg:text-[60px] font-[700] leading-none'>អំពីក្រុមហ៊ុន</h2>
+            <h2 className='text-[30px] sm:text-[40px] lg:text-[60px] font-[700] leading-none'>{t("about")}</h2>
           </div>
 
           <div className='mx-2 sm:mx-4 relative' data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
@@ -105,12 +105,14 @@ const About = () => {
                   onClick={() => setIsOpenModal(true)}
                   className="inline-block mt-4 bg-gradient-to-l from-[#EC1C24] to-[#e48c8f] hover:bg-gradient-to-l hover:from-[#e48c8f] hover:to-[#EC1C24] transition-all duration-300 text-white px-6 lg:px-10 py-2 lg:py-4 rounded-full"
                 >
-                  ចុះឈ្មោះឥឡូវនេះ
+                  {t("register")}
                 </button>
               </div>
               <div className='w-full md:w-2/3 order-1 md:order-none'>
                 <div className='max-w-[700px] mx-auto text-start text-[13px] md:text-[14px] xl:text-[16px] font-[300] flex flex-col space-y-2'>
-                  <p>{t("about_header")}</p>
+                  <p>{t("about_header1")}</p>
+                  <p>{t("about_header2")}</p>
+                  <p>{t("about_header3")}</p>
                 </div>
               </div>
             </div>
@@ -165,7 +167,15 @@ const About = () => {
             <img src={CEO} alt="" className='w-1/2 lg:w-full h-auto' />
           </div>
           <div data-aos="fade-left" className='w-full lg:w-[70%] pb-0 pt-10 lg:py-6 order-1 lg:order-none'>
-            <p>{t("msc")}</p>
+            <div className='flex flex-col'>
+              <p>{t("msc_des1")}</p>
+              <p>{t("msc_des2")}</p>
+              <p>{t("msc_des3")}</p>
+              <p>{t("msc_des4")}</p>
+              <p>{t("msc_des5")}</p>
+              <p>{t("msc_des6")}</p>
+              <p>{t("msc_des7")}</p>
+            </div>
             <p className='my-2 xl:my-4 font-[600]'>{t("msc_name")}</p>
             <p>{t("msc_company")}</p>
           </div>

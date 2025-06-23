@@ -142,16 +142,16 @@ const Price = () => {
       plan: 'Free',
       price: '$0.00',
       text: [
-        '3,000៛ - 5,000៛/កញ្ចប់',
-        'ដឹកក្នុងថ្ងៃតែមួយ',
-        'ទទួល 2វេណក្នុងមួយថ្ងៃ',
-        'ត្រលប់អីវ៉ាន់ដោយមិនគិតថ្លៃ',
-        'ផ្តល់ឃ្លាំងស្តុកផលិតផលដោយមិនគិតថ្លៃ',
-        'ទទួលប្រាក់ជំនួសដោយមិនគិតថ្លៃ',
-        'ទទួលបានសារជូនដំណឹងភ្លាមៗតាមតេឡេក្រាម',
-        'ក្រុមការងារដោះស្រាយបញ្ហាផ្ទាល់មួយទល់មួយ',
-        'របាយការណ៍ និងការទូទាត់ប្រាក់ក្នុងថ្ងៃតែមួយ',
-        'ធានាសំណង 100% លើទំនិញដែលបាត់បង់'
+        'price1',
+        'price_title2',
+        'price_title3',
+        'price_title4',
+        'price_title5',
+        'price_title6',
+        'price_title7',
+        'price_title8',
+        'price_title9',
+        'price_title10'
       ],
       heading: [
         'Size',
@@ -172,16 +172,16 @@ const Price = () => {
       plan: 'Basic  ',
       price: '$39.00',
       text: [
-        '3,000៛/កញ្ចប់',
-        'ដឹកក្នុងថ្ងៃតែមួយ',
-        'ទទួល 2វេណក្នុងមួយថ្ងៃ',
-        'ត្រលប់អីវ៉ាន់ដោយមិនគិតថ្លៃ',
-        'ផ្តល់ឃ្លាំងស្តុកផលិតផលដោយមិនគិតថ្លៃ',
-        'ទទួលប្រាក់ជំនួសដោយមិនគិតថ្លៃ',
-        'ទទួលបានសារជូនដំណឹងភ្លាមៗតាមតេឡេក្រាម',
-        'ក្រុមការងារដោះស្រាយបញ្ហាផ្ទាល់មួយទល់មួយ',
-        'របាយការណ៍ និងការទូទាត់ប្រាក់ក្នុងថ្ងៃតែមួយ',
-        'ធានាសំណង 100% លើទំនិញដែលបាត់បង់'
+        'price2',
+        'price_title2',
+        'price_title3',
+        'price_title4',
+        'price_title5',
+        'price_title6',
+        'price_title7',
+        'price_title8',
+        'price_title9',
+        'price_title10'
       ],
       heading: [
         'Size',
@@ -201,16 +201,16 @@ const Price = () => {
       plan: 'Standard',
       price: '$69.00',
       text: [
-        '2,500៛/កញ្ចប់',
-        'ដឹកក្នុងថ្ងៃតែមួយ',
-        'ទទួល 2វេណក្នុងមួយថ្ងៃ',
-        'ត្រលប់អីវ៉ាន់ដោយមិនគិតថ្លៃ',
-        'ផ្តល់ឃ្លាំងស្តុកផលិតផលដោយមិនគិតថ្លៃ',
-        'ទទួលប្រាក់ជំនួសដោយមិនគិតថ្លៃ',
-        'ទទួលបានសារជូនដំណឹងភ្លាមៗតាមតេឡេក្រាម',
-        'ក្រុមការងារដោះស្រាយបញ្ហាផ្ទាល់មួយទល់មួយ',
-        'របាយការណ៍ និងការទូទាត់ប្រាក់ក្នុងថ្ងៃតែមួយ',
-        'ធានាសំណង 100% លើទំនិញដែលបាត់បង់'
+        'price3',
+        'price_title2',
+        'price_title3',
+        'price_title4',
+        'price_title5',
+        'price_title6',
+        'price_title7',
+        'price_title8',
+        'price_title9',
+        'price_title10'
       ],
       heading: [
         'Size',
@@ -230,16 +230,16 @@ const Price = () => {
       plan: 'Premium',
       price: '$129.00',
       text: [
-        '1,900៛/កញ្ចប់',
-        'ដឹកក្នុងថ្ងៃតែមួយ',
-        'ទទួល 2វេណក្នុងមួយថ្ងៃ',
-        'ត្រលប់អីវ៉ាន់ដោយមិនគិតថ្លៃ',
-        'ផ្តល់ឃ្លាំងស្តុកផលិតផលដោយមិនគិតថ្លៃ',
-        'ទទួលប្រាក់ជំនួសដោយមិនគិតថ្លៃ',
-        'ទទួលបានសារជូនដំណឹងភ្លាមៗតាមតេឡេក្រាម',
-        'ក្រុមការងារដោះស្រាយបញ្ហាផ្ទាល់មួយទល់មួយ',
-        'របាយការណ៍ និងការទូទាត់ប្រាក់ក្នុងថ្ងៃតែមួយ',
-        'ធានាសំណង 100% លើទំនិញដែលបាត់បង់'
+        'price4',
+        'price_title2',
+        'price_title3',
+        'price_title4',
+        'price_title5',
+        'price_title6',
+        'price_title7',
+        'price_title8',
+        'price_title9',
+        'price_title10'
       ],
       heading: [
         'Size',
@@ -261,16 +261,16 @@ const Price = () => {
       plan: 'Free',
       price: '$0.00',
       text: [
-        '3,000៛ - 5,000៛/កញ្ចប់',
-        'ដឹកក្នុងថ្ងៃតែមួយ',
-        'ទទួល 2វេណក្នុងមួយថ្ងៃ',
-        'ត្រលប់អីវ៉ាន់ដោយមិនគិតថ្លៃ',
-        'ផ្តល់ឃ្លាំងស្តុកផលិតផលដោយមិនគិតថ្លៃ',
-        'ទទួលប្រាក់ជំនួសដោយមិនគិតថ្លៃ',
-        'ទទួលបានសារជូនដំណឹងភ្លាមៗតាមតេឡេក្រាម',
-        'ក្រុមការងារដោះស្រាយបញ្ហាផ្ទាល់មួយទល់មួយ',
-        'របាយការណ៍ និងការទូទាត់ប្រាក់ក្នុងថ្ងៃតែមួយ',
-        'ធានាសំណង 100% លើទំនិញដែលបាត់បង់'
+        'price1',
+        'price_title2',
+        'price_title3',
+        'price_title4',
+        'price_title5',
+        'price_title6',
+        'price_title7',
+        'price_title8',
+        'price_title9',
+        'price_title10'
       ],
       heading: [
         'Size',
@@ -291,16 +291,16 @@ const Price = () => {
       plan: 'Basic  ',
       price: '$399',
       text: [
-        '3,000៛/កញ្ចប់',
-        'ដឹកក្នុងថ្ងៃតែមួយ',
-        'ទទួល 2វេណក្នុងមួយថ្ងៃ',
-        'ត្រលប់អីវ៉ាន់ដោយមិនគិតថ្លៃ',
-        'ផ្តល់ឃ្លាំងស្តុកផលិតផលដោយមិនគិតថ្លៃ',
-        'ទទួលប្រាក់ជំនួសដោយមិនគិតថ្លៃ',
-        'ទទួលបានសារជូនដំណឹងភ្លាមៗតាមតេឡេក្រាម',
-        'ក្រុមការងារដោះស្រាយបញ្ហាផ្ទាល់មួយទល់មួយ',
-        'របាយការណ៍ និងការទូទាត់ប្រាក់ក្នុងថ្ងៃតែមួយ',
-        'ធានាសំណង 100% លើទំនិញដែលបាត់បង់'
+        'price2',
+        'price_title2',
+        'price_title3',
+        'price_title4',
+        'price_title5',
+        'price_title6',
+        'price_title7',
+        'price_title8',
+        'price_title9',
+        'price_title10'
       ],
       heading: [
         'Size',
@@ -320,16 +320,16 @@ const Price = () => {
       plan: 'Standard',
       price: '$699',
       text: [
-        '2,500៛/កញ្ចប់',
-        'ដឹកក្នុងថ្ងៃតែមួយ',
-        'ទទួល 2វេណក្នុងមួយថ្ងៃ',
-        'ត្រលប់អីវ៉ាន់ដោយមិនគិតថ្លៃ',
-        'ផ្តល់ឃ្លាំងស្តុកផលិតផលដោយមិនគិតថ្លៃ',
-        'ទទួលប្រាក់ជំនួសដោយមិនគិតថ្លៃ',
-        'ទទួលបានសារជូនដំណឹងភ្លាមៗតាមតេឡេក្រាម',
-        'ក្រុមការងារដោះស្រាយបញ្ហាផ្ទាល់មួយទល់មួយ',
-        'របាយការណ៍ និងការទូទាត់ប្រាក់ក្នុងថ្ងៃតែមួយ',
-        'ធានាសំណង 100% លើទំនិញដែលបាត់បង់'
+        'price3',
+        'price_title2',
+        'price_title3',
+        'price_title4',
+        'price_title5',
+        'price_title6',
+        'price_title7',
+        'price_title8',
+        'price_title9',
+        'price_title10'
       ],
       heading: [
         'Size',
@@ -349,16 +349,16 @@ const Price = () => {
       plan: 'Premium',
       price: '$1,299',
       text: [
-        '1,900៛/កញ្ចប់',
-        'ដឹកក្នុងថ្ងៃតែមួយ',
-        'ទទួល 2វេណក្នុងមួយថ្ងៃ',
-        'ត្រលប់អីវ៉ាន់ដោយមិនគិតថ្លៃ',
-        'ផ្តល់ឃ្លាំងស្តុកផលិតផលដោយមិនគិតថ្លៃ',
-        'ទទួលប្រាក់ជំនួសដោយមិនគិតថ្លៃ',
-        'ទទួលបានសារជូនដំណឹងភ្លាមៗតាមតេឡេក្រាម',
-        'ក្រុមការងារដោះស្រាយបញ្ហាផ្ទាល់មួយទល់មួយ',
-        'របាយការណ៍ និងការទូទាត់ប្រាក់ក្នុងថ្ងៃតែមួយ',
-        'ធានាសំណង 100% លើទំនិញដែលបាត់បង់'
+        'price4',
+        'price_title2',
+        'price_title3',
+        'price_title4',
+        'price_title5',
+        'price_title6',
+        'price_title7',
+        'price_title8',
+        'price_title9',
+        'price_title10'
       ],
       heading: [
         'Size',
@@ -385,7 +385,7 @@ const Price = () => {
         <div className='w-full h-[60vh] sm:h-[70vh] lg:h-[80vh] xl:h-[90vh] relative rounded-[20px] z-[50]' style={{ backgroundImage: `url(${bgImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
           <Navbar />
           <div className='w-full h-full flex flex-col items-center justify-center text-[#fff]' data-aos="fade-up">
-            <h2 className='text-[30px] sm:text-[40px] lg:text-[60px] font-[700] leading-none'>គម្រោងតម្លៃ</h2>
+            <h2 className='text-[30px] sm:text-[40px] lg:text-[60px] font-[700] leading-none'>{t("price")}</h2>
           </div>
 
           <div className='mx-2 sm:mx-4 relative' data-aos="fade-up">
@@ -395,11 +395,11 @@ const Price = () => {
                   onClick={() => setIsOpenModal(true)}
                   className="inline-block mt-4 bg-gradient-to-l from-[#EC1C24] to-[#e48c8f] hover:bg-gradient-to-l hover:from-[#e48c8f] hover:to-[#EC1C24] transition-all duration-300 text-white px-6 lg:px-10 py-2 lg:py-4 rounded-full"
                 >
-                  ចុះឈ្មោះឥឡូវនេះ
+                  {t("register")}
                 </button>
               </div>
               <div className='w-full md:w-2/3 order-1 md:order-none'>
-                <p className='max-w-[700px] mx-auto text-start text-[13px] md:text-[14px] xl:text-[16px]'>អេវើរេក អិចប្រេស គឺជាក្រុមហ៊ុនសេវាដឹកជញ្ជូនក្នុងប្រទេសកម្ពុជា ដែលមានបំណងជួយអភិវឌ្ឍអាជីវកម្មក្នុងស្រុក ដោយផ្តល់សេវាដឹកជញ្ជូនដែលលឿន អាចទុកចិត្តបាន និងមានតម្លៃសមរម្យ។ យើងខ្ញុំមានគោលដៅក្លាយជាវេទិកាដឹកជញ្ជូនឈានមុខគេសម្រាប់ប្រជាជនកម្ពុជា ដោយផ្អែកលើការជឿជាក់របស់អតិថិជន ប្រព័ន្ធស្វ័យប្រវត្តិកម្ម និងសម្ព័ន្ធភាពជាដៃគូអាជីវកម្មដ៏រឹងមាំ។</p>
+                <p className='max-w-[700px] mx-auto text-start text-[13px] md:text-[14px] xl:text-[16px]'>{t("service_header")}</p>
               </div>
             </div>
           </div>
@@ -412,17 +412,17 @@ const Price = () => {
       <div className='w-full min-h-screen relative -mt-[5rem]'>
         <div className='w-full min-h-screen flex flex-col items-center justify-end pt-52 pb-20' style={{ zIndex: -20, backgroundImage: `url(${Image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
           <div className='w-full h-full max-w-7xl mx-auto px-2 gap-4 text-[#662C93] text-center' data-aos="fade-up">
-            <h2 className='text-[20px] lg:text-[30px] text-[#EC1C24] font-[600] max-w-[440px] mx-auto'>ជ្រើសរើសគម្រោងដែលស្របតាមតម្រូវការអាជីវកម្មអ្នក</h2>
-            <p className='text-[13px] md:text-[14px] xl:text-[16px]'>យើងមានគម្រោងសមាជិកមួយចំនួន ដែលជួយអោយអាជីវកម្មអ្នកសន្សំសំចៃលើសេវាដឹកប្រចាំថ្ងៃ និងបង្កើនប្រាក់ចំណេញដល់អាជីវកម្មអ្នក។</p>
+            <h2 className='text-[20px] lg:text-[30px] text-[#EC1C24] font-[600] max-w-[440px] mx-auto'>{t("price_header")}</h2>
+            <p className='text-[13px] md:text-[14px] xl:text-[16px]'>{t("price_des")}</p>
           </div>
 
           <div className='w-full flex flex-col items-center justify-center'>
             <div className="inline-flex items-center justify-center rounded-full bg-white p-1 font-semibold mt-10">
               <button onClick={() => setSelected('month')} className={`px-4 sm:px-8 py-2 sm:py-3 rounded-full cursor-pointer transition-all duration-300 ${selected == 'month' ? 'bg-gradient-to-r from-[#EC1C24] to-[#FF3C67] text-white shadow-md text-[14px] md:text-[16px]' : 'text-[#EC1C24]'}`}>
-                ប្រចាំខែ
+                {t("monthly")}
               </button>
               <button onClick={() => setSelected('year')} className={`px-4 sm:px-8 py-2 sm:py-3 rounded-full cursor-pointer transition-all duration-300 ${selected == 'year' ? 'bg-gradient-to-r from-[#EC1C24] to-[#FF3C67] text-white shadow-md text-[14px] md:text-[16px]' : 'text-[#EC1C24]'}`}>
-                ប្រចាំឆ្នាំ
+                {t("annualy")}
               </button>
             </div>
 
@@ -432,19 +432,21 @@ const Price = () => {
                   <div className='text-[40px] md:text-[50px] text-[#652D90] font-[500] p-6'>
                     <h1 className='text-[20px] lg:text-[30px] font-[500] text-[#652D90]/50'>{priceItem.plan}</h1>
                     <h2>
-                      {priceItem.price} <span className='text-[20px] md:text-[30px] text-[#EC1C24]/50'>/{selected === 'month' ? 'ខែ' : 'ឆ្នាំ'}</span>
+                      {priceItem.price}<span className='text-[20px] md:text-[30px] text-[#EC1C24]/50'>/{selected === 'month' ? t("month") : t("year")}</span>
                     </h2>
                   </div>
                   <hr className='border-2 border-t-0 border-[#652D90]' />
                   <ul className="list-none p-6 flex flex-col gap-4 text-[13px] md:text-[14px] xl:text-[16px]">
                     {priceItem.text.map((item, i) => (
                       <li key={i} className="flex items-center gap-2">
-                        <svg className='w-2 h-2' viewBox="0 0 32 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="15.9795" cy="15" r="15" fill="#EC1C24" />
-                          {/* <path fillRule  ="evenodd" clipRule="evenodd" d="M31.3586 4.47303C32.1196 5.15782 32.1908 6.34247 31.5181 7.12223L17.4013 23.3674C17.2383 23.555 17.04 23.7075 16.8181 23.8158C16.5962 23.9241 16.3552 23.986 16.1094 23.9979C15.8636 24.0098 15.6179 23.9714 15.3869 23.885C15.156 23.7986 14.9443 23.6659 14.7646 23.4948L5.55796 14.7474C5.20379 14.4077 4.99615 13.939 4.98045 13.4438C4.96475 12.9486 5.14226 12.4673 5.47418 12.1049C5.80609 11.7426 6.26542 11.5288 6.75175 11.5102C7.23808 11.4916 7.71186 11.6698 8.06953 12.0058L15.9013 19.4285L28.766 4.63298C28.9264 4.44827 29.121 4.29759 29.3387 4.18955C29.5564 4.08152 29.7928 4.01827 30.0346 4.00341C30.2763 3.98855 30.5186 4.02238 30.7474 4.10297C30.9763 4.18355 31.1873 4.30931 31.3684 4.47303H31.3586Z" fill="white" /> */}
-                        </svg>
+                        <div>
+                          <svg className='w-2 h-2' viewBox="0 0 32 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="15.9795" cy="15" r="15" fill="#EC1C24" />
+                            {/* <path fillRule  ="evenodd" clipRule="evenodd" d="M31.3586 4.47303C32.1196 5.15782 32.1908 6.34247 31.5181 7.12223L17.4013 23.3674C17.2383 23.555 17.04 23.7075 16.8181 23.8158C16.5962 23.9241 16.3552 23.986 16.1094 23.9979C15.8636 24.0098 15.6179 23.9714 15.3869 23.885C15.156 23.7986 14.9443 23.6659 14.7646 23.4948L5.55796 14.7474C5.20379 14.4077 4.99615 13.939 4.98045 13.4438C4.96475 12.9486 5.14226 12.4673 5.47418 12.1049C5.80609 11.7426 6.26542 11.5288 6.75175 11.5102C7.23808 11.4916 7.71186 11.6698 8.06953 12.0058L15.9013 19.4285L28.766 4.63298C28.9264 4.44827 29.121 4.29759 29.3387 4.18955C29.5564 4.08152 29.7928 4.01827 30.0346 4.00341C30.2763 3.98855 30.5186 4.02238 30.7474 4.10297C30.9763 4.18355 31.1873 4.30931 31.3684 4.47303H31.3586Z" fill="white" /> */}
+                          </svg>
+                        </div>
 
-                        <span>{item}</span>
+                        <span>{t(item)}</span>
 
                         {i === 0 && (
                           <div className="group relative inline-block">

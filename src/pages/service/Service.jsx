@@ -165,7 +165,7 @@ const Service = () => {
         <div className='w-full h-[60vh] sm:h-[70vh] lg:h-[80vh] xl:h-[90vh] relative rounded-[20px] z-[50]' style={{ backgroundImage: `url(${bgImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
           <Navbar />
           <div className='w-full h-full flex flex-col items-center justify-center text-[#fff]' data-aos="fade-up">
-            <h2 className='text-[30px] sm:text-[40px] lg:text-[60px] font-[700] leading-none'>សេវាកម្មដឹកជញ្ជូន</h2>
+            <h2 className='text-[30px] sm:text-[40px] lg:text-[60px] font-[700] leading-none'>{t("Services")}</h2>
           </div>
 
           <div className='mx-2 sm:mx-4 relative' data-aos="fade-up">
@@ -175,7 +175,7 @@ const Service = () => {
                   onClick={() => setIsOpenModal(true)}
                   className="inline-block mt-4 bg-gradient-to-l from-[#EC1C24] to-[#e48c8f] hover:bg-gradient-to-l hover:from-[#e48c8f] hover:to-[#EC1C24] transition-all duration-300 text-white px-6 lg:px-10 py-2 lg:py-4 rounded-full"
                 >
-                  ចុះឈ្មោះឥឡូវនេះ
+                  {t("register")}
                 </button>
               </div>
               <div className='w-full md:w-2/3 order-1 md:order-none'>
@@ -260,9 +260,9 @@ const Service = () => {
 
       {/* prohabit */}
       <div className='w-full min-h-screen relative py-10' style={{ backgroundImage: `url(${Image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-        <h2 className='text-[20px] lg:text-[30px] text-[#662C93] font-[600] text-center max-w-[440px] mx-auto' data-aos="fade-up">ប្រភេទឥវ៉ាន់ទទួល និងមិនទទួល</h2>
+        <h2 className='text-[20px] lg:text-[30px] text-[#662C93] font-[600] text-center max-w-[440px] mx-auto' data-aos="fade-up">{t("item")}</h2>
         <div className='w-full max-w-7xl mx-auto px-2 pt-10'>
-          <h1 data-aos="fade-right" className='text-[20px] lg:text-[30px] font-[600] text-[#662C93] bg-linear-to-r from-[#CD8BFF] to-[#EED8FF] inline-block px-10 py-1 rounded-[30px]'>ទទួល</h1>
+          <h1 data-aos="fade-right" className='text-[20px] lg:text-[30px] font-[600] text-[#662C93] bg-linear-to-r from-[#CD8BFF] to-[#EED8FF] inline-block px-10 py-1 rounded-[30px]'>{t("give")}</h1>
           <div className='flex flex-wrap items-stretch justify-center gap-4 py-10'>
             {Items.slice(0, 4).map((Item, index) => (
               <div data-aos="fade-right" key={index} className='flex flex-col items-center justify-start w-[90%] sm:w-[48%] lg:w-[23%] h-[170px] sm:h-[180px] p-4 md:p-6 rounded-[30px] border-2 border-[#fff]' style={{ background: `radial-gradient(88.46% 88.46% at 46.02% 11.54%, #FFFFFF 39.18%, rgba(245, 222, 255, 0.5) 100%)` }}>
@@ -276,7 +276,7 @@ const Service = () => {
         </div>
 
         <div className='w-full max-w-7xl mx-auto px-2 pt-0 md:pt-10'>
-          <h1 data-aos="fade-right" className='text-[20px] lg:text-[30px] font-[600] text-[#EC1C24] bg-linear-to-l from-[#EED8FF] to-[#EC1C24]/70 inline-block px-10 py-1 rounded-[30px]'>មិនទទួល</h1>
+          <h1 data-aos="fade-right" className='text-[20px] lg:text-[30px] font-[600] text-[#EC1C24] bg-linear-to-l from-[#EED8FF] to-[#EC1C24]/70 inline-block px-10 py-1 rounded-[30px]'>{t("not_give")}</h1>
           <div className='flex flex-wrap items-stretch justify-center gap-4 py-10'>
             {Items.slice(4, 8).map((Item, index) => (
               <div data-aos="fade-right" key={index} className='flex flex-col items-center justify-start w-[90%] sm:w-[48%] lg:w-[23%] h-[170px] sm:h-[180px] p-4 md:p-6 rounded-[30px] border-2 border-[#fff]' style={{ background: `radial-gradient(88.46% 88.46% at 46.02% 11.54%, #FFFFFF 39.18%, rgba(245, 222, 255, 0.5) 100%)` }}>

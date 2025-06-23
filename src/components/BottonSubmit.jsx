@@ -141,7 +141,7 @@ const BottonSubmit = ({ isOpen, onClose }) => {
                     >
                         &times;
                     </button>
-                    <h1 className='text-[20px] lg:text-[30px] font-[500] text-[#652D90]'>ចុះឈ្មោះឥឡូវនេះ</h1>
+                    <h1 className='text-[20px] lg:text-[30px] font-[500] text-[#652D90]'>{t("register")}</h1>
 
                     <form onSubmit={handleSubmit} noValidate>
                         {/* Name */}

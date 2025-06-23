@@ -15,6 +15,8 @@ import icon7 from '../../assets/images/home/home-icon/icon-7.png'
 import Footer from '../../components/Footer'
 import BottonSubmit from '../../components/BottonSubmit'
 
+import '../home/home.css'
+
 const items = [
   {
     title: 'home_service1',
@@ -81,12 +83,12 @@ const Home = () => {
               onClick={() => setIsOpenModal(true)}
               className="inline-block mt-4 bg-gradient-to-l from-[#EC1C24] to-[#e48c8f] hover:bg-gradient-to-l hover:from-[#e48c8f] hover:to-[#EC1C24] transition-all duration-300 text-white px-6 lg:px-10 py-2 lg:py-4 rounded-full"
             >
-              ចុះឈ្មោះឥឡូវនេះ
+              {t("register")}
             </button>
           </div>
 
-          <div data-aos="zoom-in-down" data-aos-duration="5000">
-            <img src={HomeImage} alt="" />
+          <div className='image-container' data-aos="zoom-in-down" data-aos-duration="5000">
+            <img src={HomeImage} alt="" className="floating-image" />
           </div>
         </div>
       </div>

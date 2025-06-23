@@ -8,7 +8,7 @@ import '../../components/footer.css'
 import { useTranslation } from 'react-i18next'
 const Contact = () => {
 
-  const {t} = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <>
@@ -16,7 +16,7 @@ const Contact = () => {
         <div className='w-full h-[60vh] sm:h-[70vh] lg:h-[80vh] xl:h-[90vh] relative rounded-[20px] z-[50]' style={{ backgroundImage: `url(${bgImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
           <Navbar />
           <div className='w-full h-full flex flex-col items-center justify-center text-[#fff]' data-aos="fade-up">
-            <h2 className='text-[30px] sm:text-[40px] lg:text-[60px] font-[700] text-center leading-none'>ទំនាក់ទំនង <br /> មកកាន់យើងខ្ញុំ</h2>
+            <h2 className='text-[30px] sm:text-[40px] lg:text-[60px] max-w-[330px] font-[700] text-center leading-none'>{t("contact_title")}</h2>
           </div>
         </div>
       </div>
@@ -61,12 +61,12 @@ const Contact = () => {
               <div className='flex flex-col gap-4 md:gap-6'>
                 <h1 className='font-[600]'>011 900 618</h1>
                 <div>
-                  <h2 className='font-[600]'>ទីតាំងការិយាល័យកណ្តាល</h2>
-                  <p>ជាន់ទី ៧ អគារអាយអេសអាយ ភូមិត្រពាំងថ្លឹង ៣ សង្កាត់ចោមចៅ ខណ្ឌពោធិ៍សែនជ័យ រាជធានីភ្នំពេញ</p>
+                  <h2 className='font-[600]'>{t("footer_title1")}</h2>
+                  <p>{t("footer_des1")}</p>
                 </div>
                 <div>
-                  <h2 className='font-[600]'>ទីតាំងឃ្លាំង</h2>
-                  <p>បុរីពិភពថ្មី ចំការដូង ២ រាជធានីភ្នំពេញ</p>
+                  <h2 className='font-[600]'>{t("footer_title2")}</h2>
+                  <p>{t("footer_des2")}</p>
                 </div>
               </div>
 
